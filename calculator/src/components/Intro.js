@@ -5,7 +5,7 @@ const Intro = () => {
         <header>
             <h1>Savings Calculator</h1>
             <p>
-                This calculator projects how your savings will grow over the course of five years. Input the initial value of your savings account and your bank's interest rate. Savings will be calculated on a yearly basis.
+                This calculator projects how your savings will grow over the course of ten years. Input the initial value of your savings account and your bank's interest rate. Savings will be calculated on a yearly basis.
             </p>
         </header>
     )

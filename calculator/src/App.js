@@ -38,7 +38,7 @@ function App() {
       return
     }
 
-    const years = 5;
+    const years = 10;
     const savingsData = [initialAmount];
 
     for (let i = 0; i < years; i++) {
@@ -46,7 +46,7 @@ function App() {
       nextAmount = parseFloat(nextAmount.toFixed(2));
       savingsData.push(nextAmount);
     }
-    
+
     setSavingsArray(savingsData);
     setShowChart(true);
   };
