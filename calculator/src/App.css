@@ -58,21 +58,14 @@ button {
 }
 
 .chart {
-  background-color: deepskyblue;
   padding: 1rem 4rem;
+  background-color: lightblue
 }
 
 table {
-  margin: 0 auto;
-  border: 1px solid black;
-  border-spacing: 1rem;
-  background-color: ghostwhite;
-  padding: 1rem;
-  margin-bottom: 2rem;
-}
-
-tr {
-  padding: 10px;
-  border-bottom: 1px solid black;
-  border-collapse: collapse;
+  margin: 2rem auto;
+  border-spacing: 4rem .7rem;
+  background-color: aliceblue;
+  border-radius: 5px;
+  padding: 1rem 2rem;
 }

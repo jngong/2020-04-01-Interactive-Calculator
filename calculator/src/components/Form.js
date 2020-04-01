@@ -10,7 +10,7 @@ export const Form = ({
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Initial Savings ($)
+        Initial Savings Amount ($)
         <input
           type="text"
           name="initialSavings"

@@ -46,6 +46,7 @@ function App() {
       nextAmount = parseFloat(nextAmount.toFixed(2));
       savingsData.push(nextAmount);
     }
+    
     setSavingsArray(savingsData);
     setShowChart(true);
   };
