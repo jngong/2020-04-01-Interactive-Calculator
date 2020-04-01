@@ -9,7 +9,7 @@ const Chart = ({ savingsArray, interestRate, showChart }) => {
 
   const mapSavings = savingsArray.map((amount, i) => {
     return (
-      <tr>
+      <tr key={i}>
         <td>{i}</td>
         <td>${amount}</td>
       </tr>
@@ -24,11 +24,15 @@ const Chart = ({ savingsArray, interestRate, showChart }) => {
         <p>Growth Rate: {interestRate}%</p>
       </div>
       <table>
-        <tr>
-          <th>Year</th>
-          <th>Savings Value</th>
-        </tr>
-        {mapSavings}
+        <thead>
+          <tr>
+            <th>Year</th>
+            <th>Savings Value</th>
+          </tr>
+        </thead>
+        <tbody>
+            {mapSavings}
+        </tbody>
       </table>
     </div>
   );

@@ -20,13 +20,24 @@ function App() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    calculateSavings();
-    setShowChart(true);
+    if (!initialSavings || !interestRate) {
+      alert("Please enter both your initial savings and bank interest rate.")
+    }  else {
+      calculateSavings();
+    }
   };
 
   const calculateSavings = () => {
     const initialAmount = parseFloat(initialSavings);
     const interestRatePercent = parseFloat(interestRate / 100);
+    console.log(initialAmount)
+    console.log(interestRatePercent)
+
+    if (isNaN(initialAmount) || isNaN(interestRatePercent)) {
+      alert("Please only enter numbers")
+      return
+    }
+
     const years = 5;
     const savingsData = [initialAmount];
 
@@ -36,6 +47,7 @@ function App() {
       savingsData.push(nextAmount);
     }
     setSavingsArray(savingsData);
+    setShowChart(true);
   };
 
   return (
