@@ -21,8 +21,8 @@ function App() {
   const handleSubmit = e => {
     e.preventDefault();
     if (!initialSavings || !interestRate) {
-      alert("Please enter both your initial savings and bank interest rate.")
-    }  else {
+      alert("Please enter both your initial savings and bank interest rate.");
+    } else {
       calculateSavings();
     }
   };
@@ -30,12 +30,10 @@ function App() {
   const calculateSavings = () => {
     const initialAmount = parseFloat(initialSavings);
     const interestRatePercent = parseFloat(interestRate / 100);
-    console.log(initialAmount)
-    console.log(interestRatePercent)
 
     if (isNaN(initialAmount) || isNaN(interestRatePercent)) {
-      alert("Please only enter numbers")
-      return
+      alert("Please only enter numbers");
+      return;
     }
 
     const years = 10;
