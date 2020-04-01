@@ -11,7 +11,7 @@ const Chart = ({ savingsArray, interestRate, showChart }) => {
     return (
       <tr key={i}>
         <td>{i}</td>
-        <td>${amount}</td>
+        <td>$ {amount}</td>
       </tr>
     );
   });
@@ -20,7 +20,7 @@ const Chart = ({ savingsArray, interestRate, showChart }) => {
     <div className="chart">
       <div className="chart-header">
         <h2>Your Yearly Savings</h2>
-        <p>Initial Savings Amount: ${initialSavings}</p>
+        <p>Initial Savings Amount: $ {initialSavings}</p>
         <p>Growth Rate: {interestRate}%</p>
       </div>
       <table>
