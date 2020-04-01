@@ -30,9 +30,7 @@ const Chart = ({ savingsArray, interestRate, showChart }) => {
             <th>Savings Value</th>
           </tr>
         </thead>
-        <tbody>
-            {mapSavings}
-        </tbody>
+        <tbody>{mapSavings}</tbody>
       </table>
     </div>
   );
