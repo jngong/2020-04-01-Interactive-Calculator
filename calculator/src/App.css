@@ -8,7 +8,8 @@ body {
   text-align: center;
 }
 
-header, form {
+header,
+form {
   background-color: aliceblue;
   padding: 1rem 4rem;
 }
@@ -38,7 +39,7 @@ label {
 }
 
 input {
-  padding: .5rem;
+  padding: 0.5rem;
   width: 150px;
   border-radius: 5px;
   outline: none;
@@ -46,12 +47,32 @@ input {
 
 button {
   margin: 1rem;
-  padding: .7rem 2rem;
+  padding: 0.7rem 2rem;
   background-color: darkviolet;
   color: white;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 5px;
+}
+
+.chart {
+  background-color: deepskyblue;
+  padding: 1rem 4rem;
+}
+
+table {
+  margin: 0 auto;
+  border: 1px solid black;
+  border-spacing: 1rem;
+  background-color: ghostwhite;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+tr {
+  padding: 10px;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
 }
