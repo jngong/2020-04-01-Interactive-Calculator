@@ -5,27 +5,54 @@ import Chart from "./components/Chart";
 import "./App.css";
 
 function App() {
-  const [savings, setSavings] = useState('');
-  const [interestRate, setInterestRate] = useState(0);
+  const [initialSavings, setInitialSavings] = useState("");
+  const [interestRate, setInterestRate] = useState("");
+  const [showChart, setShowChart] = useState(false);
+  const [savingsArray, setSavingsArray] = useState([]);
 
   const handleSavingsChange = e => {
-    setSavings(e.target.value)
+    setInitialSavings(e.target.value);
   };
 
   const handleInterestRateChange = e => {
-    setInterestRate(e.target.value)
-  }
+    setInterestRate(e.target.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    calculateSavings();
+    setShowChart(true);
+  };
+
+  const calculateSavings = () => {
+    const initialAmount = parseFloat(initialSavings);
+    const interestRatePercent = parseFloat(interestRate / 100);
+    const years = 5;
+    const savingsData = [initialAmount];
+
+    for (let i = 0; i < years; i++) {
+      let nextAmount = savingsData[i] + savingsData[i] * interestRatePercent;
+      nextAmount = parseFloat(nextAmount.toFixed(2));
+      savingsData.push(nextAmount);
+    }
+    setSavingsArray(savingsData);
+  };
 
   return (
     <div className="App">
       <Intro />
       <Form
-        savings={savings}
+        initialSavings={initialSavings}
         interestRate={interestRate}
         handleSavingsChange={handleSavingsChange}
         handleInterestRateChange={handleInterestRateChange}
+        handleSubmit={handleSubmit}
       />
-      <Chart />
+      <Chart
+        savingsArray={savingsArray}
+        interestRate={interestRate}
+        showChart={showChart}
+      />
     </div>
   );
 }

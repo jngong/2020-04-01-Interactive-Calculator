@@ -1,20 +1,26 @@
 import React from "react";
 
-export const Form = ({ savings, interestRate, handleSavingsChange, handleInterestRateChange }) => {
+export const Form = ({
+  initialSavings,
+  interestRate,
+  handleSavingsChange,
+  handleInterestRateChange,
+  handleSubmit
+}) => {
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label>
-        Initial Savings (in USD$)
+        Initial Savings ($)
         <input
           type="text"
-          name="savings"
-          value={savings}
+          name="initialSavings"
+          value={initialSavings}
           onChange={handleSavingsChange}
         />
       </label>
-      
+
       <label>
-        Bank Interest Rate(%)
+        Bank Interest Rate (%)
         <input
           type="text"
           name="interestRate"
@@ -22,9 +28,7 @@ export const Form = ({ savings, interestRate, handleSavingsChange, handleInteres
           onChange={handleInterestRateChange}
         />
       </label>
-      <button>
-          Calculate Savings
-      </button>
+      <button>Calculate Savings</button>
     </form>
   );
 };

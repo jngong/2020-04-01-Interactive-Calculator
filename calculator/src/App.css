@@ -1,16 +1,57 @@
+body {
+  font-size: 16px;
+}
+
 .App {
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
 
-label {
-  max-width: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 1rem auto;
+header, form {
+  background-color: aliceblue;
+  padding: 1rem 4rem;
+}
+
+header h1 {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header p {
+  line-height: 1.4rem;
 }
 
 form {
   display: block;
   flex-direction: column;
+}
+
+label {
+  max-width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem auto;
+  font-weight: bold;
+}
+
+input {
+  padding: .5rem;
+  width: 150px;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  margin: 1rem;
+  padding: .7rem 2rem;
+  background-color: darkviolet;
+  color: white;
+  font-size: .9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 5px;
 }
