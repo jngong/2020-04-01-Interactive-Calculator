@@ -1,16 +1,32 @@
-import React from 'react';
+import React from "react";
 
-export const Form = () => {
-    return(
-        <form>
-            <input 
-                type="text"
-                name="initialValue"
-            />
+export const Form = ({ savings, interestRate, handleSavingsChange, handleInterestRateChange }) => {
+  return (
+    <form>
+      <label>
+        Initial Savings (in USD$)
+        <input
+          type="text"
+          name="savings"
+          value={savings}
+          onChange={handleSavingsChange}
+        />
+      </label>
+      
+      <label>
+        Bank Interest Rate(%)
+        <input
+          type="text"
+          name="interestRate"
+          value={interestRate}
+          onChange={handleInterestRateChange}
+        />
+      </label>
+      <button>
+          Calculate Savings
+      </button>
+    </form>
+  );
+};
 
-        </form>
-    )
-
-}
-
-export default Form
+export default Form;
